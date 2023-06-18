@@ -5,17 +5,24 @@ root = Tk()
 root.title("Radio Buttons")
 root.iconbitmap("")
 
-anything = IntVar()
+pizza = StringVar()
 
-def buttonClicked(value):
-    myLabel = Label(root, text=value)
+MODES = [
+    ("Cheese", "Cheese"),
+    ("Pepperoni", "Pepperoni"),
+    ("Mushroom", "Mushroom"),
+    ("Onion", "Onion")
+]
+pizza.set(MODES[2][0])
+
+def buttonClicked(mode):
+    myLabel = Label(root, text=mode)
     myLabel.pack()
 
-Radiobutton(root, text="Option 1", variable=anything, value=1, command=lambda: buttonClicked(anything.get())).pack()
-Radiobutton(root, text="Option 2", variable=anything, value=2, command=lambda: buttonClicked(anything.get())).pack()
+for text, value in MODES:
+    Radiobutton(root, text=text, variable=pizza, value=value).pack(anchor=W)
 
-
-myButton = Button(root, text="Click here", command=lambda: buttonClicked(anything.get()))
+myButton = Button(root, text="Order", command=lambda: buttonClicked(pizza.get()))
 myButton.pack()
 
 root.mainloop()

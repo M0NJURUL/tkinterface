@@ -1,7 +1,8 @@
 # here we will print simple text using pack
 
 # importing everything inside tkinter library
-from tkinter import *
+# from tkinter import *
+import tkinter
 
 # everything in tkinter is a widget
 # for example: button widget, text widget, frame widget
@@ -12,11 +13,11 @@ from tkinter import *
 #       packing is one of the ways to make it ready
 
 # this is root widget
-root = Tk()
+root = tkinter.Tk()
 # -> it creates the initial box window for graphical interface
 
 # 1. creating a label widget
-myLabel = Label(root, text="Hello World!")
+myLabel = tkinter.Label(root, text="Hello World!")
 # -> more parameter we can pass (height=100, width=100)
 
 # 2. packing to show it onto the screen
