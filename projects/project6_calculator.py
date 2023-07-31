@@ -6,7 +6,7 @@ root = Tk()
 # changing the title of the project
 root.title("Calculator")
 
-e = Entry(root, width=45, borderwidth=5)
+e = Entry(root, width=45, borderwidth=10)
 # e.insert(0, "0")
 
 e.grid(row=0, column=0, columnspan=3, padx=10, pady=10)
@@ -22,6 +22,8 @@ def clearButton():
     e.delete(0, END)
 
 global first_number, arithmetic_operator
+# first_number = 0
+# arithmetic_operator = "addition"
 
 def addButton():
     global first_number

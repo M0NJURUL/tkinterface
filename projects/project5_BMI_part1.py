@@ -27,8 +27,8 @@ def action():
     result.destroy()
 
     try:
-        w = int(weight.get())
-        h = int(height.get())
+        w = float(weight.get())
+        h = float(height.get())
         h = h * 0.3048  # converting to meter
         h_square = h ** 2
         BMI = w / h_square

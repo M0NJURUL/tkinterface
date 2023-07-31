@@ -9,7 +9,7 @@ root = Tk()
 root.title("Radio Buttons")
 root.iconbitmap("")
 
-# tkinter variable is a little different from normal different
+# tkinter variable is a little different from normal variable
 
 anything = IntVar() # calling IntVar() function because the value the variable will get is an integer
 # anything.set(2) # this is to set the default options

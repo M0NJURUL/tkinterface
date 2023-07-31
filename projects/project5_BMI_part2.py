@@ -15,7 +15,7 @@ normal = PhotoImage(file="images/bmi states/normal.png")
 overweight = PhotoImage(file="images/bmi states/overweight.png")
 obese = PhotoImage(file="images/bmi states/obese.png")
 
-appLabel = Label(root, text="BMI calculator (for age 18 or older)")
+appLabel = Label(root, text="BMI calculator (for age 18 or older)", bg="cyan", borderwidth=10)
 
 weightLabel = Label(root, text="Enter weight (in KG):")
 weight = Entry(root)
